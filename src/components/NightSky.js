@@ -5,12 +5,17 @@ const NightSky = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
+    const mountNode = mountRef.current; // Store ref in a variable
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
-    mountRef.current.appendChild(renderer.domElement);
+
+    if (mountNode) {
+      mountNode.appendChild(renderer.domElement);
+    }
 
     // Gradient background setup
     const gradientMaterial = new THREE.ShaderMaterial({
@@ -48,7 +53,6 @@ const NightSky = () => {
     };
     animate();
 
-
     // Resize handler and cleanup
     const handleResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
@@ -56,10 +60,13 @@ const NightSky = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
     window.addEventListener('resize', handleResize);
-    return () => {
 
+    return () => {
       window.removeEventListener('resize', handleResize);
-      mountRef.current.removeChild(renderer.domElement);
+
+      if (mountNode) {
+        mountNode.removeChild(renderer.domElement);
+      }
     };
   }, []);
 
