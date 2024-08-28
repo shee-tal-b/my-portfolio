@@ -9,14 +9,14 @@ Welcome to my personal portfolio website! This site showcases my projects, skill
 
 # Installation
 1. Clone the repository:
-'''git clone https://github.com/yourusername/my-portfolio.git'''
+```git clone https://github.com/yourusername/my-portfolio.git```
 2. Navigate to the project directory:
-'''cd my-portfolio'''
+```cd my-portfolio```
 3. Install the dependencies:
-'''npm install'''
+```npm install```
 
 # Running the App
-'''npm start'''
+```npm start```
 
 # License
 This project is licensed under the MIT License - see the LICENSE file for details.
