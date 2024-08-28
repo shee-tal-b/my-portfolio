@@ -1,0 +1,33 @@
+/* Footer styles */
+.Footer {
+    background-color: #000000; /* Darker background for better contrast */
+    color: #fff; /* White text color for readability */
+    text-align: center; /* Center-align text */
+    padding: 1rem; /* Add padding for spacing */
+    position: relative; /* Allows footer to be positioned correctly */
+    bottom: 0;
+    width: 100%; /* Ensure footer spans the full width */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Add subtle shadow for separation */
+  }
+  
+  /* Style for footer links */
+  .Footer a {
+    color: #61dafb; /* Accent color for links */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .Footer a:hover {
+    text-decoration: underline; /* Underline on hover for better visibility */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .Footer {
+      padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+  
+    .Footer p {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+  }
+  

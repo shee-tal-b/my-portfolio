@@ -1,0 +1,17 @@
+/* src/components/DarkModeToggle.css */
+
+.dark-mode-toggle {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dark-mode-toggle:hover {
+    background-color: #4682b4;
+  }
+  

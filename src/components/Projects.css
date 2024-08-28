@@ -1,0 +1,56 @@
+.projects {
+  padding: 4rem 1rem; /* Adjust padding as needed */
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent dark background */
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  background: rgba(0, 0, 0, 0.9); /* Darker background for the card */
+  border-radius: 10px;
+  padding: 2rem; /* Adjust padding as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  color: #f0f0f0;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}

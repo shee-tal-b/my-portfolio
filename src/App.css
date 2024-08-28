@@ -1,5 +1,45 @@
+/* Existing styles */
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Optional: You can choose a different font-family */
+  letter-spacing: 100rem;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the App takes up at least the full height of the viewport */
+  position: relative; /* Ensure positioning context for content */
   text-align: center;
+  overflow: hidden; /* Prevent scrollbars from appearing if content is taller than viewport */
+}
+
+/* Ensure that the NightSky component covers the full viewport */
+.night-sky {
+  position: fixed; /* Fixes the background to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Places it behind other content */
+}
+
+/* Styling for header and logo */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-logo {
@@ -11,17 +51,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -36,3 +65,6 @@
     transform: rotate(360deg);
   }
 }
+
+
+

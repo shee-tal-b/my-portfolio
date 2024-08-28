@@ -1,0 +1,89 @@
+/* General header styling */
+.header {
+  background-color: #040405; /* Dark background */
+  color: white;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for the logo */
+.logo {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Menu toggle button */
+.menu-toggle {
+  display: none; /* Hide by default for larger screens */
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Navigation styles */
+.nav {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav li {
+  margin: 0 1rem;
+}
+
+.nav a {
+  color: white;
+  font-weight: 700;
+
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show menu toggle for small screens */
+  }
+
+  .nav {
+    margin-top: 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000000;
+    width: 100%;
+    flex-direction: column;
+    display: flex; /* Make sure it's flex for proper layout */
+    opacity: 0; /* Start with hidden */
+    height: 0; /* Start with zero height */
+    overflow: hidden; /* Hide content when collapsed */
+    transition: opacity 1s ease, height 0.3s ease; /* Smooth transition for opacity and height */
+  }
+  
+  .nav.active {
+    opacity: 1; /* Fully visible */
+    height: auto; /* Expand to fit content */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav li {
+    margin: 0.5rem 0;
+  }
+}

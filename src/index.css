@@ -1,13 +1,43 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* index.css */
+
+:root {
+  --background-color-light: #ffffff;
+  --background-color-dark: #121212;
+  --text-color-light: #000000;
+  --text-color-dark: #e0e0e0;
+  --link-color-light: #1e90ff;
+  --link-color-dark: #1e90ff;
+  --card-background-light: #f4f4f4;
+  --card-background-dark: #1e1e1e;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+a {
+  color: var(--link-color-light);
+  text-decoration: none;
+}
+
+a.dark-mode {
+  color: var(--link-color-dark);
+}
+
+.project-card, .skills li, .contact-form input, .contact-form textarea {
+  background-color: var(--card-background-light);
+}
+
+.project-card.dark-mode, .skills li.dark-mode, .contact-form input.dark-mode, .contact-form textarea.dark-mode {
+  background-color: var(--card-background-dark);
 }
